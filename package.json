@@ -1,0 +1,21 @@
+{
+  "name": "circal",
+  "version": "1.0.0",
+  "description": "here comes the sun",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "suncalc;",
+    "daylight"
+  ],
+  "author": "ja-svoboda",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "ical.js": "^2.1.0",
+    "jquery": "^3.7.1",
+    "suncalc": "^1.9.0"
+  }
+}
