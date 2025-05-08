@@ -16,7 +16,9 @@
 }
 
 @media (max-width: 600px){ 
-
+    button {
+        font-size: 1rem;
+    }
 }
 
 h1{
