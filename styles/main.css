@@ -23,8 +23,15 @@
 }
 
 h1{
-
-	font-weight: 300;
+    background-color: var(--black);
+    font-weight: lighter;
+    font-family: var(--font-monospace);
+    color: var(--light-grey);
+    border: none;
+    border-radius: none;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    margin: 1rem;
 }
 
 
