@@ -17,30 +17,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //daytime
 
+function formatTime(date) {
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
+
 function getSunTimes() {
     const today = new Date();
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
+                storedLatitude = position.coords.latitude;
+                storedLongitude = position.coords.longitude;
 
-                const times = SunCalc.getTimes(today, latitude, longitude);
+                const times = SunCalc.getTimes(today, storedLatitude, storedLongitude);
                 const sunrise = times.sunrise;
                 const sunset = times.sunset;
 
-                storedLatitude = position.coords.latitude;
-                storedLongitude = position.coords.longitude;
                 storedSunrise = sunrise;
                 storedSunset = sunset;
 
-                const option = { hour: '2-digit', minute: '2-digit' };
-                const sunriseStr = sunrise.toLocaleTimeString([], option);
-                const sunsetStr = sunset.toLocaleTimeString([], option);
+                const sunriseStr = formatTime(sunrise);
+                const sunsetStr = formatTime(sunset);
 
                 document.getElementById("mainTimes").innerHTML =
-                    ` ↑ ${sunriseStr}  ↓ ${sunsetStr}`;
+                    `${sunriseStr} – ${sunsetStr}`;
             },
             (error) => {
                 document.getElementById("mainTimes").innerHTML =
