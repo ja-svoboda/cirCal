@@ -16,11 +16,11 @@
 </head>
 <body>
 
-<button>cirCal: how long is this day?</button>
+<h1>cirCal: how long is this day?</h1>
 
 <div id="info" class="info">  
   <p id="date">Getting date…</p>
-  <p id="mainTimes" class="times"></p>  
+  <p id="mainTimes" class="times">sunrise – sunset</p>  
 
     <!-- CirCalendar -->
     <noscript>
@@ -28,12 +28,14 @@
     </noscript>
 </div>
 
-<button onclick=getSunTimes() class="button">click to see daytime</button>
+<div class="buttons">
+<button onclick=getSunTimes() class="button">click to see dayliht times</button>
 <button onclick=createICalEvent() class="button">export .ics</button>
+</div>
 
-
-<p class="note">this app use your geoData for makes it works, others like cookies, tracking etc. are not required.<br>
-    enjoy and sleep well.<br> 
+<p class="note">this app use data for location to makes it works.<br> others like cookies, tracking etc. are not required.<br>
+    enjoy your day and sleep well.<br>
+    <br>
     <a href="https://github.com/ja-svoboda/cirCal">source</a>
 </p>
 

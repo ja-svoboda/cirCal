@@ -13,79 +13,67 @@
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-monospace: monospace;
     --font-size: 14px;
+    --font-weight: 300;
 
 }
 
-@media only screen and (max-width: 600px){ 
-    button {
-        font-size: 1rem;
-    }
+body{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+
+    background-color: var(--light-grey);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+
 }
 
-h1{
-    background-color: var(--black);
-    font-weight: lighter;
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+button {
+    font-size: 1rem;
+    font-weight: var(--font-weight);
     font-family: var(--font-monospace);
+    text-transform: uppercase;
+    padding: 0.5rem;
+
+    background-color: var(--black);
     color: var(--light-grey);
     border: none;
-    border-radius: none;
-    padding: 0.5rem;
-    text-transform: uppercase;
+
+
     margin: 1rem;
-}
-
-
-
-body {
-	font-family: var(--font-family) ;
-	font-weight: 300;
-	color: var(--black);
-	margin-top: 20%;
-	background-color: var(--light-grey);
-	text-align: center;
-	min-width: 375px;
-
-}
-
-.night-mode {
-	background-color: var(--red);
-	color: var(--black);
-
-}
-
-/* my button */
-
-button{
-    background-color: var(--black);
-    font-weight: lighter;
-    font-family: var(--font-monospace);
-    color: var(--light-grey);
-    border: none;
-    border-radius: none;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    margin: 1rem;
-
+    text-align: center;
 }
 
 .button:hover {
     rotate: 3deg;
-
 }
 
-.suncalc{
-    color: #bdbdbd;
+h1 {
+    font-size: 1rem;
+    font-weight: var(--font-weight);
+    font-family: var(--font-monospace);
+    text-transform: uppercase;
+    padding: 0.5rem;
+
+    background-color: var(--black);
+    color: var(--light-grey);
+    border: none;
+
+    margin: 1rem;
+    text-align: center;
 }
 
-.note{
-    margin-top: 5rem;
-    color: var(--black);
-
-}
-
-
-a{
-    text-decoration: underline;
-    color: var(--black);
-    margin-top: 5rem;
+p{
+    line-height: 32px;   /* within paragraph */
+    margin-bottom: 30px; /* between paragraphs */
 }
