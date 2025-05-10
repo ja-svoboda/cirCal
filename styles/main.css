@@ -28,7 +28,7 @@ body{
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: min(5em, 10%);
+    margin-top: min(5em, 5%);
 
 }  
 
@@ -66,14 +66,9 @@ button {
 h1 {
     font-size: 1.5rem;
     font-weight: var(--font-weight);
-
     text-transform: uppercase;
     padding: 0.5rem;
-
-
-
     border: none;
-
     margin: 1rem;
     text-align: center;
 }
@@ -82,3 +77,4 @@ p{
     line-height: 32px;   /* within paragraph */
     margin-bottom: 30px; /* between paragraphs */
 }
+
